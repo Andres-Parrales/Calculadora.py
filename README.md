@@ -1,120 +1,92 @@
-Desktop Calculator – Python & Tkinter
+# 🧮 Desktop Calculator – Python & Tkinter
 
-A clean, modern desktop calculator application built with Python and Tkinter, featuring a real calculator-style interface, keyboard support, operation history, and Windows executable packaging.
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-This project was developed with a modular architecture, separating GUI, business logic, error handling, and history management to follow good software engineering practices.
+A clean, modern desktop calculator application featuring a real calculator-style interface, keyboard support, and modular architecture.
 
-✨ Features
 
-✅ Real calculator layout (buttons & display)
 
-⌨️ Keyboard support (Enter to calculate)
+---
 
-🧠 Modular architecture (clean separation of concerns)
+## ✨ Features
 
-🕒 Operation history panel
+* **Real Calculator Layout:** Intuitive buttons and responsive display.
+* **Keyboard Support:** Full integration (Press `Enter` to calculate).
+* **History Management:** Dedicated panel to track previous operations.
+* **Modular Design:** Strict separation of concerns (GUI vs Logic).
+* **Production Ready:** Unit tests included and Windows `.exe` packaging.
 
-🧹 Clear history functionality
+---
 
-🪟 Windows .exe executable
+## 🧠 Architecture Overview
 
-🎨 Custom icon
+The application follows a professional layered design to ensure maintainability:
 
-🧪 Unit tests included
+| Module | Responsibility |
+| :--- | :--- |
+| `gui.py` | Handles user interaction, display updates, and event listeners. |
+| `calculator_core.py` | Pure mathematical logic, independent of the UI. |
+| `history.py` | Manages data persistence for calculation history. |
+| `errors.py` | Custom exception definitions for robust error handling. |
 
-📂 Project Structure
-CALCULADORA.PY/
-│
-├── gui.py                  # Main graphical interface (Tkinter)
-├── calculator_core.py      # Core calculation logic
-├── history.py              # History management
-├── errors.py               # Custom exceptions
-├── main.txt                # Optional entry notes
-├── test_calculator.py      # Unit tests
-│
-├── Calculadora.exe         # Windows executable
-├── Calculadora.spec        # PyInstaller configuration
-├── icono.ico               # Application icon
-│
-├── build/                  # PyInstaller build files
-├── __pycache__/            # Python cache
-├── .vscode/                # VS Code settings
-│
+---
+
+## 📂 Project Structure
+
+```text
+├── src/
+│   ├── gui.py              # Main graphical interface
+│   ├── calculator_core.py  # Core calculation logic
+│   ├── history.py          # History management
+│   └── errors.py           # Custom exceptions
+├── tests/
+│   └── test_calculator.py  # Unit tests
+├── assets/
+│   └── icono.ico           # Application icon
 ├── .gitignore
 └── README.md
-
-🧠 Architecture Overview
-
-The application follows a simple but professional layered design:
-
-GUI (gui.py)
-Handles user interaction, buttons, keyboard input, and display updates.
-
-Core Logic (calculator_core.py)
-Contains all mathematical operations, independent from the GUI.
-
-History (history.py)
-Stores and manages calculation history.
-
-Errors (errors.py)
-Custom exceptions for clean error handling.
-
-This separation makes the project easy to maintain, test, and extend.
-
-🚀 How to Run (Python)
-Requirements
-
+🚀 Getting Started
+Prerequisites
 Python 3.10+
 
-Tkinter (included with Python on Windows)
+Tkinter (usually bundled with Python)
 
-Run the application:
-python gui.py
+Installation & Run
+Clone the repository:
 
+Bash
+
+git clone [https://github.com/Andres-Parrales/desktop-calculator.git](https://github.com/Andres-Parrales/desktop-calculator.git)
+Navigate to the source folder and run:
+
+Bash
+
+python src/gui.py
+Running Tests
+Bash
+
+python -m unittest tests/test_calculator.py
 🪟 Windows Executable (.exe)
+This project uses PyInstaller for packaging. To build the executable:
 
-The application is packaged using PyInstaller.
+Bash
 
-To build it yourself:
-
-pyinstaller --onefile --windowed --icon=icono.ico gui.py
-
-
-The executable will be generated inside the dist/ folder.
-
-🧪 Running Tests
-python test_calculator.py
+pyinstaller --onefile --windowed --icon=assets/icono.ico src/gui.py
+The resulting file will be located in the dist/ folder.
 
 🛠️ Technologies Used
+Language: Python
 
-Python
+UI Framework: Tkinter
 
-Tkinter
+Testing: Unittest
 
-PyInstaller
-
-Git & GitHub
-
-📌 Learning Goals
-
-This project was created to practice and demonstrate:
-
-Desktop GUI development with Tkinter
-
-Clean code and modular design
-
-Exception handling
-
-Git version control
-
-Packaging Python applications into executables
-
-📄 License
-
-This project is for educational and portfolio purposes.
+Deployment: PyInstaller
 
 👤 Author
+Iván - Junior Software Developer
 
-Iván
-Junior Software Developer
-Python | Desktop Applications | Clean Architecture
+LinkedIn
+
+Portfolio

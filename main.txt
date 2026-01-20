@@ -1,0 +1,44 @@
+#main.py
+
+from calculator_core import calculate
+from history import get_history, clear_history
+from errors import CalculatorError
+
+
+def run():
+    while True:
+        print('\n ---CALCULADORA---')
+        print("add | subtract | multiply | percent | divide")
+        print("history | clear | exit")
+        
+        option = input("opcion: ").lower()
+        
+        if option == "exit":
+            print("saliendo...")
+            break
+        
+        if option == "history":
+            for item in get_history():
+                print(item)
+                continue
+        
+        if option == "clear":
+            clear_history()
+            print("Historial borrado")
+            continue
+        
+        try:
+            a = float(input("Numero 1: "))
+            b = float(input("Numero 2: "))
+            result = calculate(option, a, b)
+            print("Resultado:", result)
+        
+        except CalculatorError as e:
+            print("Error:", e)
+        
+        except ValueError:
+            print("Entrada invalida")
+
+if __name__ == "__main__":
+    run()
+

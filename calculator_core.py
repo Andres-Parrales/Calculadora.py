@@ -1,7 +1,7 @@
 #calculator_core.py
 
 from errors import DivisionByZeroError, InvalidOperationError
-from history import add_to_history
+
 
 def add(a: float, b: float) -> float:
     """Suma dos numeros"""
@@ -46,7 +46,6 @@ def calculate(operation: str, a: float, b: float) -> float:
     else:
         raise InvalidOperationError("Operacion invalida")
     
-    add_to_history(f"{a} {operation} {b}", result)
     return result
 
 

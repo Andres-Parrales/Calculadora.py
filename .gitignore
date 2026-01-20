@@ -1,0 +1,12 @@
+# PyInstaller
+/dist
+/build
+*.spec
+*.exe
+
+# Python
+__pycache__/
+*.pyc
+
+# Historial
+historial.txt

@@ -1,23 +1,18 @@
-#history.py
+# history.py
 
-_history = []  #Lista privada para guardar operaciones
+_history = []
 
-def add_to_history(operation: str, result: float):
+def add_to_history(operation: str, result=None):
     """
-    Save a operation in history
+    Save operation in history without duplicating result
     """
-    _history.append(f"{operation} = {result}")
+    if result is None:
+        _history.append(operation)
+    else:
+        _history.append(f"{operation}")
 
 def get_history():
-    """
-    Returns a copy of the history.
-    """
     return _history.copy()
 
 def clear_history():
-    """
-    Clear the all history
-    """
     _history.clear()
-
-

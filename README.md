@@ -46,22 +46,19 @@ The application follows a professional layered design to ensure maintainability:
 │   └── icono.ico           # Application icon
 ├── .gitignore
 └── README.md
+
 🚀 Getting Started
 Prerequisites
 Python 3.10+
-
 Tkinter (usually bundled with Python)
-
 Installation & Run
 Clone the repository:
 
 Bash
-
-git clone [https://github.com/Andres-Parrales/desktop-calculator.git](https://github.com/Andres-Parrales/desktop-calculator.git)
+git clone [https://github.com/Andres-Parrales/Calculadora.py](https://github.com/Andres-Parrales/Calculadora.py)
 Navigate to the source folder and run:
 
 Bash
-
 python src/gui.py
 Running Tests
 Bash
@@ -71,22 +68,16 @@ python -m unittest tests/test_calculator.py
 This project uses PyInstaller for packaging. To build the executable:
 
 Bash
-
 pyinstaller --onefile --windowed --icon=assets/icono.ico src/gui.py
 The resulting file will be located in the dist/ folder.
 
 🛠️ Technologies Used
 Language: Python
-
 UI Framework: Tkinter
-
 Testing: Unittest
-
 Deployment: PyInstaller
 
 👤 Author
 Iván - Junior Software Developer
-
 LinkedIn
-
 Portfolio
